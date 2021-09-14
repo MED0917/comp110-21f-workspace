@@ -1,8 +1,6 @@
 """EX01 Hype Machine."""
 
-__author__ = 730382017
-
-# TODO: Implement your program logic here
+__author__ = "730382017"
 
 name: str = input("What is your name? ")
 print(name + ", you are awesome!")
