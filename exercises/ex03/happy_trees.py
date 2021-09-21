@@ -4,13 +4,16 @@ __author__ = "730382017"
 
 TREE: str = '\U0001F332'
 
-depth = int(input("Depth:  "))
+counter: int = 0
+depth_var = int(input("Depth: "))
 
-if depth <= 0:
+if depth_var <= 0:
     print()
 else:
-    while depth >= 1:
-        print(TREE * depth)
-        depth = depth - 1
-
-      
+    entry: str = ""
+    while counter <= depth_var:
+        entry = TREE * counter
+        print(entry)
+        
+        counter = counter + 1
+        
