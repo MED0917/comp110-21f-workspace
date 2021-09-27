@@ -1,3 +1,5 @@
+"""Create Your Own Adventure."""
+
 __author__ = "730382017"
 
 points: int = 0
@@ -7,6 +9,7 @@ heart_face: str = '\U0001F970'
 
 
 def main() -> None:
+    """Main menu."""
     global points
     global counter
     greet()
@@ -35,11 +38,14 @@ def main() -> None:
 
         
 def greet() -> None:
+    """Welcome message and player input."""
     global player 
-    player = input(" Welcome to a game of numbers, where you'll see if you can guess a higher number than the computer can! If you do guess higher, you'll gain a point. Let's get started. What's your name? ")
+    print("Welcome to a game of numbers, where you'll see if you can guess a higher number than the computer can! If you do guess higher, you'll gain a point. Let's get started.") 
+    player = input("What's your name? ")
 
 
 def game() -> None:
+    """Random Number Game."""
     global points
     number = int(input("Choose a number between 1 and 20: "))
     from random import randint
@@ -59,6 +65,7 @@ def game() -> None:
 
 
 def total_game_points(a: int) -> None: 
+    """Total points after game is completed."""
     global player
     points = 10
     print(f'Congrats {player}! You have {points} points! That is so exciting!' + heart_face)
