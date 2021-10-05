@@ -4,8 +4,9 @@ __author__ = "730382017"
 
 
 def main() -> None:
+    """Runs all functions."""
     nums: list[int] = [1, 1, 1] 
-    nums_in_list: list[int] = [1, 1, 1]
+    nums_in_list: list[int] = []
     max_list: list[int] = [10, -5, 25, 33]
     print(all(nums, 1))
     print(is_equal(nums, nums_in_list))
@@ -15,6 +16,8 @@ def main() -> None:
 def all(a: list[int], b: int) -> bool:
     """Return True if all numbers match indicated number, return false if list is empty."""
     i: int = 0 
+    if len(a) == 0:
+        return False
     while i < len(a):
         if a[i] != b:
             return False
@@ -23,8 +26,9 @@ def all(a: list[int], b: int) -> bool:
 
 
 def is_equal(a: list[int], b: list[int]) -> bool:
-    "Return True if lists are equal, False if otherwise."
-
+    """Return True if lists are equal, False if otherwise."""
+    if len(a) and len(b) == 0:
+        return True
     i: int = 0 
     while i < len(a):
         if a != b:
